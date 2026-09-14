@@ -2,7 +2,7 @@
 <html lang="zh-CN" class="dark">
 <head>
   <meta charset="UTF-8">
-  <title>美福瑞音乐网 - 纯前端音乐播放器</title>
+  <title>>美福瑞音乐网 - 纯前端音乐播放器</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -29,6 +29,7 @@
     @keyframes lyricFadeIn { 0% { opacity: 0; transform: translateY(4px); } 100% { opacity: 1; transform: translateY(0); } }
     .animate-lyric { animation: lyricFadeIn 0.25s ease-out forwards; }
     * { transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease; }
+
     html.light { background-color: #f1f5f9; }
     html.light body { background-color: #f1f5f9; color: #0f172a; }
     html.light .bg-slate-950 { background-color: #f1f5f9; }
@@ -71,6 +72,7 @@
   </style>
 </head>
 <body class="bg-slate-950 text-slate-100 flex flex-col font-sans select-none antialiased">
+
   <!-- 导航栏 -->
   <header class="shrink-0 bg-slate-900/90 backdrop-blur-md border-b border-slate-800/80 px-3 py-2 flex items-center justify-between relative z-40">
     <div class="w-[80px]"></div>
@@ -79,7 +81,7 @@
         <div class="absolute -inset-1 bg-gradient-to-r from-brand-500 to-indigo-500 rounded-full blur-md opacity-70"></div>
         <img src="https://xmbjm.github.io/logo.gif" class="relative w-12 h-12 rounded-full border-2 border-brand-500 object-cover" alt="Avatar">
       </div>
-      <h1 class="text-2xl font-black mt-0.5 tracking-wider bg-gradient-to-r from-brand-500 to-purple-400 bg-clip-text text-transparent">美福瑞音乐网</h1>
+      <h1 class="text-2xl font-black mt-0.5 tracking-wider bg-gradient-to-r from-brand-500 to-purple-400 bg-clip-text text-transparent">拾光音乐网</h1>
     </div>
     <div class="flex items-center space-x-0.5 w-[80px] justify-end">
       <button id="themeToggle" class="p-2 text-slate-400 hover:text-white rounded-full hover:bg-slate-800 transition cursor-pointer">
@@ -89,10 +91,11 @@
         </svg>
       </button>
       <button id="settingsBtn" class="p-2 text-slate-400 hover:text-white rounded-full hover:bg-slate-800 transition cursor-pointer">
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
       </button>
     </div>
   </header>
+
   <!-- 核心内容 -->
   <main class="flex-1 min-h-0 flex flex-col md:flex-row p-3 gap-3 overflow-hidden">
     <div class="flex-1 min-h-0 flex flex-col gap-2">
@@ -121,12 +124,13 @@
         </div>
       </div>
     </div>
+
     <!-- 歌词面板 -->
     <div class="hidden md:flex flex-[0.8] min-h-0 flex flex-col bg-slate-900/30 border border-slate-800/50 rounded-xl overflow-hidden">
       <div class="px-3.5 py-2 border-b border-slate-800/80 flex justify-between items-center bg-slate-900/50 shrink-0">
         <span class="font-bold text-xs text-slate-300">歌词同步</span>
         <button id="downloadLrcBtn" class="hidden text-[10px] text-brand-400 hover:text-brand-300 flex items-center space-x-1 bg-brand-500/10 hover:bg-brand-500/20 px-2 py-0.5 rounded transition">
-          <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" /></svg>
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
           <span>LRC</span>
         </button>
       </div>
@@ -135,6 +139,7 @@
       </div>
     </div>
   </main>
+
   <!-- 播放器 -->
   <footer class="shrink-0 bg-slate-900/95 border-t border-slate-800 p-3 z-40">
     <div class="max-w-7xl mx-auto flex flex-col space-y-2.5">
@@ -152,14 +157,14 @@
         <div class="flex flex-col items-center w-full md:w-2/5 space-y-1">
           <div class="flex items-center space-x-5">
             <button id="prevBtn" title="上一首" class="flex flex-col items-center gap-0.5 text-slate-400 hover:text-white transition active:scale-90 px-1">
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M6 4a1 1 0 00-1 1v14a1 1 0 102 0V5a1 1 0 00-1-1z" /><path d="M19.207 10.293a1 1 0 010 1.414l-6 6A1 1 0 0112 17V7a1 1 0 001.707-.707l5.5 5.5z" /></svg>
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M6 4a1 1 0 00-1 1v14a1 1 0 102 0V5a1 1 0 00-1-1z"/><path d="M19.207 10.293a1 1 0 010 1.414l-6 6A1 1 0 0112 17V7a1 1 0 011.707-.707l5.5 5.5z"/></svg>
               <span class="text-[9px] leading-none">上一首</span>
             </button>
             <button id="playBtn" title="播放/暂停" class="bg-brand-600 hover:bg-brand-700 text-white p-2 rounded-full transition active:scale-95 shadow-lg shadow-brand-500/20">
-              <svg id="playIcon" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" /></svg>
+              <svg id="playIcon" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/></svg>
             </button>
             <button id="nextBtn" title="下一首" class="flex flex-col items-center gap-0.5 text-slate-400 hover:text-white transition active:scale-90 px-1">
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18 4a1 1 0 00-1 1v14a1 1 0 102 0V5a1 1 0 00-1-1z" /><path d="M4.793 6.293a1 1 0 00-1.707.707v10a1 1 0 001.707.707l6-5a1 1 0 000-1.414l-6-5z" /></svg>
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18 4a1 1 0 00-1 1v14a1 1 0 102 0V5a1 1 0 00-1-1z"/><path d="M4.793 6.293a1 1 0 00-1.707.707v10a1 1 0 001.707.707l6-5a1 1 0 000-1.414l-6-5z"/></svg>
               <span class="text-[9px] leading-none">下一首</span>
             </button>
           </div>
@@ -178,13 +183,14 @@
             <option value="flac" selected>无损 (FLAC)</option>
           </select>
           <button id="downloadSongBtn" class="bg-slate-800 hover:bg-slate-700 active:scale-95 text-[11px] text-slate-300 border border-slate-700 rounded-lg px-2.5 py-1 flex items-center space-x-1 transition">
-            <svg class="w-3 h-3 text-brand-400" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" /></svg>
+            <svg class="w-3 h-3 text-brand-400" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
             <span>歌曲</span>
           </button>
         </div>
       </div>
     </div>
   </footer>
+
   <!-- 设置弹窗 -->
   <div id="settingsModal" class="hidden fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
     <div class="bg-slate-900 border border-slate-800 rounded-2xl max-w-lg w-full p-5 space-y-4">
@@ -201,6 +207,7 @@
       </div>
     </div>
   </div>
+
   <!-- 全屏歌词页 -->
   <div id="lyricPage" class="hidden fixed inset-0 z-[60] flex flex-col overflow-hidden bg-gradient-to-b from-slate-950 via-slate-900 to-black">
     <div id="lyricPageBg" class="absolute inset-0 opacity-20 blur-3xl scale-110 bg-cover bg-center pointer-events-none"></div>
@@ -208,7 +215,7 @@
       <div class="flex items-center space-x-3 min-w-0">
         <img id="lyricPageCover" class="w-12 h-12 rounded-xl object-cover border border-slate-800 shadow-lg shrink-0" src="">
         <div class="min-w-0">
-          <div id="lyricPageTitle" class="font-bold text-sm text-slate-100 truncate">美福瑞音乐</div>
+          <div id="lyricPageTitle" class="font-bold text-sm text-slate-100 truncate">拾光音乐</div>
           <div id="lyricPageArtist" class="text-[11px] text-slate-400 truncate">听我想听</div>
         </div>
       </div>
@@ -220,16 +227,19 @@
     <div class="relative flex items-center justify-center space-x-10 py-4 mb-2 shrink-0">
       <button id="lyricPagePrev" title="上一首" class="px-5 py-2 rounded-full bg-slate-800/80 hover:bg-slate-700 text-slate-200 hover:text-white text-sm font-medium active:scale-95 transition">上一首</button>
       <button id="lyricPagePlay" class="bg-brand-600 hover:bg-brand-700 text-white p-3.5 rounded-full active:scale-95 transition shadow-lg shadow-brand-500/30">
-        <svg id="lyricPagePlayIcon" class="w-7 h-7" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" /></svg>
+        <svg id="lyricPagePlayIcon" class="w-7 h-7" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/></svg>
       </button>
       <button id="lyricPageNext" title="下一首" class="px-5 py-2 rounded-full bg-slate-800/80 hover:bg-slate-700 text-slate-200 hover:text-white text-sm font-medium active:scale-95 transition">下一首</button>
     </div>
   </div>
-  <audio id="audioPlayer" class="hidden">
+
+  <audio id="audioPlayer" class="hidden"></audio>
+
   <script>
     // ============================================================
     // 核心功能：歌词、搜索、播放
     // ============================================================
+
     // ========== 工具函数 ==========
     function decodeHTML(html) {
       if (!html) return '';
@@ -237,17 +247,20 @@
       txt.innerHTML = html;
       return txt.value;
     }
+
     function formatTime(seconds) {
       if (isNaN(seconds)) return '00:00';
       const m = Math.floor(seconds / 60).toString().padStart(2, '0');
       const s = Math.floor(seconds % 60).toString().padStart(2, '0');
       return `${m}:${s}`;
     }
+
     function artworkShort2Long(albumpicShort, size = 1080) {
       if (!albumpicShort) return undefined;
       const idx = albumpicShort.indexOf("/");
       return idx !== -1 ? `https://img4.kuwo.cn/star/albumcover/${size}${albumpicShort.slice(idx)}` : undefined;
     }
+
     function getDefaultCover() {
       const canvas = document.createElement('canvas');
       canvas.width = 100;
@@ -272,11 +285,13 @@
       return canvas.toDataURL('image/png');
     }
     const DEFAULT_COVER = getDefaultCover();
+
     function getProxyUrl(url) {
       const proxyBase = localStorage.getItem('music_cors_proxy') || 'https://jsnzkpg4.pages.dev/';
       const cleanProxy = proxyBase.endsWith('/') ? proxyBase : proxyBase + '/';
       return `${cleanProxy}${url}`;
     }
+
     // fetch 带超时，防止个别慢请求挂死整批加载
     async function fetchWithTimeout(url, ms = 15000) {
       const ctrl = new AbortController();
@@ -287,6 +302,7 @@
         clearTimeout(timer);
       }
     }
+
     // 榜单匹配结果缓存（localStorage，每天更新）：当天首次打开强制拉取最新榜单，
     // 同一天内重复打开命中缓存秒出、跳过网络匹配；跨天后自动失效重新匹配
     const RANK_CACHE_TTL = 24 * 3600 * 1000; // 24h 兜底
@@ -310,6 +326,7 @@
         localStorage.setItem('music_rank_cache_' + bangKey, JSON.stringify({ t: Date.now(), day: todayStr(), songs }));
       } catch (e) { /* 存储满时静默忽略 */ }
     }
+
     // ========== DOM ==========
     const searchInput = document.getElementById('searchInput');
     const randomBtn = document.getElementById('randomBtn');
@@ -358,6 +375,7 @@
     const lyricPagePlay = document.getElementById('lyricPagePlay');
     const lyricPagePlayIcon = document.getElementById('lyricPagePlayIcon');
     const lyricPageNext = document.getElementById('lyricPageNext');
+
     // ========== 状态 ==========
     let currentQuery = '';
     let currentPage = 1;
@@ -382,6 +400,7 @@
     let unlockArmed = false;        // "静音自动播放"兜底后是否已挂起"首次交互开声"监听
     let autoplayMuted = false;      // 是否处于静音自动播放兜底状态（页面尚未获得有声播放授权）
     const kuwoHitCache = new Map(); // 酷我匹配结果内存缓存（同曲重试/换榜复用，零重复请求）
+
     // ========== 主题切换 ==========
     function setTheme(isDark) {
       const html = document.documentElement;
@@ -398,15 +417,18 @@
       }
       localStorage.setItem('theme', isDark ? 'dark' : 'light');
     }
+
     function toggleTheme() {
       const isDark = document.documentElement.classList.contains('dark');
       setTheme(!isDark);
     }
     themeToggle.onclick = toggleTheme;
+
     function initTheme() {
       const saved = localStorage.getItem('theme');
       setTheme(saved !== 'light');
     }
+
     // ========== API ==========
     async function searchMusic(query, page, rn = 30) {
       const url = `http://search.kuwo.cn/r.s?client=kt&all=${encodeURIComponent(query)}&pn=${page - 1}&rn=${rn}&uid=2574109560&ver=kwplayer_ar_8.5.4.2&vipver=1&ft=music&cluster=0&strategy=2012&encoding=utf8&rformat=json&vermerge=1&mobi=1`;
@@ -428,6 +450,7 @@
       }));
       return { isEnd: (+res.PN + 1) * +res.RN >= +res.TOTAL, data: songs };
     }
+
     // ========== 随机听歌词库 & 排行榜 ==========
     const RANDOM_KEYWORDS = [
       '周杰伦','林俊杰','邓紫棋','陈奕迅','薛之谦','许嵩','毛不易','周深','李荣浩','王菲',
@@ -445,10 +468,12 @@
       '国风','新中式','硬核','轻摇滚','氛围感','深夜电台','治愈系','爵士乐','K-pop','欧美流行',
       '迪斯科','新浪潮','电子舞曲','热带夜晚','山歌','粤剧','二胡','琵琶','口琴','手风琴'
     ];
+
     const BANG_CONFIG = {
       hot: { name: '热歌榜', icon: '🔥', listId: '3778678' },
       new: { name: '新歌榜', icon: '🆕', listId: '3779629' },
     };
+
     // 网易云榜单 → 取全部歌名，再转酷我歌曲（播放/歌词仍走酷我链路，保证可播放）
     async function fetchRankingTracks(bangKey) {
       const cfg = BANG_CONFIG[bangKey];
@@ -460,6 +485,7 @@
         artist: (t.artists || t.ar || []).map(a => a.name).join('/') || '未知歌手',
       }));
     }
+
     async function findKuwoSong(name, artist) {
       const key = `${name}|${artist}`;
       // 内存缓存：同榜重试、换榜重复歌曲直接命中，避免重复网络请求
@@ -476,6 +502,7 @@
       if (kuwoHitCache.size > 600) kuwoHitCache.clear(); // 防止无限增长
       return hit;
     }
+
     async function mapLimit(items, limit, fn) {
       const out = new Array(items.length);
       let i = 0;
@@ -488,6 +515,7 @@
       await Promise.all(Array.from({ length: Math.min(limit, items.length) }, worker));
       return out;
     }
+
     // ========== 【核心修复】歌词获取 - 直接传纯数字 ID ==========
     async function fetchLyrics(songId) {
       // songId 是纯数字，直接拼接
@@ -522,6 +550,7 @@
         return [];
       }
     }
+
     // ========== 【核心修复】高清封面 - 直接传纯数字 ID ==========
     async function fetchHighResArtwork(songId) {
       const url = `http://m.kuwo.cn/newh5/singles/songinfoandlrc?musicId=${songId}&httpStatus=1`;
@@ -538,6 +567,7 @@
         return null;
       } catch(e) { return null; }
     }
+
     // ========== 渲染 ==========
     function pickRandomKeyword() {
       // 随机歌单名：从词库取一个词，排除最近用过的词，保证每次随机歌单名不同
@@ -554,10 +584,12 @@
       if (recentRandomKeywords.length > 12) recentRandomKeywords.shift();
       return fallback;
     }
+
     async function triggerRandomPlay() {
       // 点随机按钮：无条件随机取新词，保证每次都是不同的歌单名
       await playRandomSearch(pickRandomKeyword());
     }
+
     async function playRandomSearch(query) {
       // 按 query 搜索并将结果整体打乱成随机歌单连续播放
       searchInput.value = query;
@@ -569,12 +601,14 @@
       currentPage = 1;
       await loadSearchList();
     }
+
     function setRankTabActive(key) {
       const activeCls = 'rank-tab flex-1 bg-brand-600 border-brand-500 rounded-xl px-3 py-1.5 text-xs font-semibold text-white transition';
       const idleCls  = 'rank-tab flex-1 bg-slate-900 border border-slate-800 rounded-xl px-3 py-1.5 text-xs font-semibold text-slate-300 transition';
       rankHotBtn.className = key === 'hot' ? activeCls : idleCls;
       rankNewBtn.className = key === 'new' ? activeCls : idleCls;
     }
+
     async function loadSearchList() {
       rankShuffleMode = false; // 搜索/随机模式按列表顺序连播
       rankToken++; // 切换到搜索，使进行中的榜单批次失效
@@ -615,6 +649,7 @@
         console.error(err);
       }
     }
+
     async function loadRanking(bangKey) {
       rankToken++;
       currentMode = 'rank';
@@ -656,6 +691,7 @@
         musicList.innerHTML = `<div class="text-center text-red-400 py-8 px-4 text-xs">${cfg.name}加载失败，请检查代理</div>`;
       }
     }
+
     // 榜单歌曲行 HTML（供流式追加渲染，列表用 120 缩略图）
     function rankRowHtml(song, idx) {
       const isActive = currentIndex === idx;
@@ -672,7 +708,8 @@
         </div>
       `;
     }
-    // 数组洗牌（Fisher‑Yates）：榜单整单随机排序，实现打开即随机播放
+
+    // 数组洗牌（Fisher-Yates）：榜单整单随机排序，实现打开即随机播放
     function shuffleArray(arr) {
       const a = arr.slice();
       for (let i = a.length - 1; i > 0; i--) {
@@ -681,6 +718,7 @@
       }
       return a;
     }
+
     // 后台预取另一榜单的网易歌单（切榜时直接进入匹配，省一次网络等待）
     function prefetchNextBang(current) {
       if (current === 'hot') {
@@ -691,6 +729,7 @@
         fetchRankingTracks('hot').then(t => { prefetchedHot = t; }).catch(() => {});
       }
     }
+
     // 默认全量加载榜单：边匹配边渲染（流式），自动加载全部歌曲，不做数量限制
     async function loadRankingAll() {
       if (rankLoading) return;
@@ -740,6 +779,7 @@
         rankLoading = false;
       }
     }
+
     function renderPlaylist() {
       musicList.innerHTML = playlist.map((song, idx) => {
         const isActive = currentIndex === idx;
@@ -757,6 +797,7 @@
         `;
       }).join('');
     }
+
     function renderLyrics() {
       const emptyHtml = '<div class="text-center text-slate-600 py-8 text-xs">暂无歌词</div>';
       if (!lyrics || lyrics.length === 0) {
@@ -772,6 +813,7 @@
       if (lyricsContainer) lyricsContainer.innerHTML = rows;
       if (lyricPageContainer) lyricPageContainer.innerHTML = rows;
     }
+
     // 歌词高亮：同时作用于侧栏与全屏歌词页（滚动居中）
     function applyLyricHighlight(activeIdx) {
       const targets = [
@@ -797,6 +839,7 @@
         }
       });
     }
+
     // ========== 全屏歌词页 ==========
     function openLyricPage() {
       if (currentIndex === -1 || !playlist[currentIndex]) return;
@@ -810,9 +853,11 @@
       if (currentIndex >= 0) applyLyricHighlight(lastActiveIdx < 0 ? 0 : lastActiveIdx);
       updatePlayButtonState(!audioPlayer.paused);
     }
+
     function closeLyricPage() {
       lyricPage.classList.add('hidden');
     }
+
     // ========== 播放 ==========
     // 有声自动播放被浏览器拦截时：自动降级为"静音自动播放"（浏览器允许 muted 自动播放），
     // 音乐立即开始（无声音），等用户第一次真实交互（任意位置）自动开启声音，进度不打断。
@@ -836,17 +881,21 @@
       document.addEventListener('keydown', unlock);
       document.addEventListener('touchend', unlock);
     }
+
     async function playSong(idx, openLyric = false) {
       if (idx < 0 || idx >= playlist.length) return;
       currentIndex = idx;
       const song = playlist[currentIndex];
       renderPlaylist();
+
       playerTitle.innerText = song.title;
       playerArtist.innerText = song.artist;
       playerCover.src = song.artwork || DEFAULT_COVER;
       playerCover.onerror = function() { this.src = DEFAULT_COVER; };
+
       // 歌词页已打开时切歌保持打开；点击播放不再自动弹出
       if (!lyricPage.classList.contains('hidden')) openLyricPage();
+
       const QUALITY_MAP = { 'mp3': 'standard', 'exhigh': 'exhigh', 'flac': 'lossless' };
       const apiLevel = QUALITY_MAP[qualitySelect.value] || 'standard';
       qualityFall = 0; // 每首重置：允许无损→高品质→标准逐级降档
@@ -858,4 +907,235 @@
       // 音乐立即开始走动，提示"点击任意处开启声音"，首次交互后开声、进度不打断。
       try {
         const playPromise = audioPlayer.play();
-        if (playPromise && typeof play
+        if (playPromise && typeof playPromise.catch === 'function') {
+          playPromise.catch(async err => {
+            console.log('有声自动播放被拦截，降级静音自动播放', err);
+            audioPlayer.muted = true;
+            autoplayMuted = true;
+            try { await audioPlayer.play(); } catch(e2) { console.error('静音自动播放也被拦截', e2); }
+            miniLyricText.innerText = '🔇 已静音自动播放 · 点击任意处开启声音';
+            updatePlayButtonState(true);
+            armSoundUnlock();
+          });
+        }
+      } catch(err) {
+        audioPlayer.muted = true;
+        autoplayMuted = true;
+        miniLyricText.innerText = '🔇 已静音自动播放 · 点击任意处开启声音';
+        armSoundUnlock();
+      }
+      updatePlayButtonState(true);
+
+      // 传纯数字 ID
+      fetchHighResArtwork(song.id).then(url => { if(url) { song.artwork = url; playerCover.src = url; } });
+
+      // ====== 加载歌词 ======
+      lastActiveIdx = -1;
+      miniLyricText.innerText = "⏳ 正在加载歌词...";
+      lyricsContainer.innerHTML = '<div class="text-center text-slate-500 py-8 text-xs">正在加载歌词...</div>';
+      if (lyricPageContainer) lyricPageContainer.innerHTML = '<div class="text-center text-slate-500 py-8 text-xs">正在加载歌词...</div>';
+      downloadLrcBtn.classList.add('hidden');
+      lyrics = [];
+
+      // 传纯数字 ID
+      const rawLyrics = await fetchLyrics(song.id);
+      console.log('🎵 歌词解析结果:', rawLyrics);
+
+      if (rawLyrics && rawLyrics.length > 0) {
+        lyrics = rawLyrics;
+        renderLyrics();
+        downloadLrcBtn.classList.remove('hidden');
+        miniLyricText.innerText = `🎵 ${song.title} - ${song.artist}`;
+        console.log('✅ 歌词加载成功，共', lyrics.length, '行');
+      } else {
+        lyricsContainer.innerHTML = '<div class="text-center text-slate-600 py-8 text-xs">暂无歌词</div>';
+        if (lyricPageContainer) lyricPageContainer.innerHTML = '<div class="text-center text-slate-600 py-8 text-xs">暂无歌词</div>';
+        miniLyricText.innerText = "🔇 暂无歌词";
+        console.warn('❌ 歌词加载失败');
+      }
+
+      // 歌词加载完成后：仅歌词页已打开时保持
+      if (!lyricPage.classList.contains('hidden')) openLyricPage();
+    }
+
+    function updatePlayButtonState(isPlaying) {
+      if (isPlaying) {
+        playIcon.innerHTML = `<path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zM7 8a1 1 0 012 0v4a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v4a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd" />`;
+        if (lyricPagePlayIcon) lyricPagePlayIcon.innerHTML = `<path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zM7 8a1 1 0 012 0v4a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v4a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd" />`;
+      } else {
+        playIcon.innerHTML = `<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />`;
+        if (lyricPagePlayIcon) lyricPagePlayIcon.innerHTML = `<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />`;
+      }
+    }
+
+    // ========== 下载 ==========
+    async function downloadCurrentSong() {
+      if (currentIndex === -1) { alert('请先播放一首歌曲'); return; }
+      const song = playlist[currentIndex];
+      const QUALITY_MAP = { 'mp3': 'standard', 'exhigh': 'exhigh', 'flac': 'lossless' };
+      const apiLevel = QUALITY_MAP[qualitySelect.value] || 'standard';
+      const playUrl = `https://music.nxinxz.com/kw.php?id=${encodeURIComponent(song.id)}&level=${apiLevel}&type=mp3`;
+      const originalHTML = downloadSongBtn.innerHTML;
+      downloadSongBtn.innerHTML = `<span class="animate-pulse">⏳</span> 下载中...`;
+      downloadSongBtn.disabled = true;
+      try {
+        const response = await fetch(getProxyUrl(playUrl));
+        const blob = await response.blob();
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = `${song.title} - ${song.artist}.${apiLevel === 'lossless' ? 'flac' : 'mp3'}`;
+        a.click();
+        URL.revokeObjectURL(a.href);
+      } catch(e) { alert('下载失败'); }
+      downloadSongBtn.innerHTML = originalHTML;
+      downloadSongBtn.disabled = false;
+    }
+
+    function downloadLyrics() {
+      if (lyrics.length === 0) { alert('没有歌词可下载'); return; }
+      const song = playlist[currentIndex];
+      let lrc = `[ti:${song.title}]\n[ar:${song.artist}]\n[al:${song.album || '未知'}]\n`;
+      lyrics.forEach(line => {
+        const m = Math.floor(line.time / 60).toString().padStart(2, '0');
+        const s = Math.floor(line.time % 60).toString().padStart(2, '0');
+        const ms = Math.floor((line.time % 1) * 100).toString().padStart(2, '0');
+        lrc += `[${m}:${s}.${ms}]${line.text}\n`;
+      });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(new Blob([lrc], { type: 'text/plain;charset=utf-8' }));
+      a.download = `${song.title} - ${song.artist}.lrc`;
+      a.click();
+      URL.revokeObjectURL(a.href);
+    }
+
+    // ========== 音频事件 ==========
+    audioPlayer.ontimeupdate = () => {
+      const cur = audioPlayer.currentTime;
+      const dur = audioPlayer.duration || 0;
+      progressBar.style.width = `${(cur/dur)*100 || 0}%`;
+      currentTimeEl.innerText = formatTime(cur);
+      durationTimeEl.innerText = formatTime(dur);
+
+      if (lyrics.length > 0) {
+        let activeIdx = -1;
+        for (let i = 0; i < lyrics.length; i++) {
+          if (cur >= lyrics[i].time) activeIdx = i;
+          else break;
+        }
+        if (activeIdx === -1) activeIdx = 0;
+        if (activeIdx !== lastActiveIdx) {
+          lastActiveIdx = activeIdx;
+          const line = lyrics[activeIdx];
+          miniLyricText.innerText = line.text ? `🎤 ${line.text}` : "🎵 ...";
+          applyLyricHighlight(activeIdx);
+        }
+      }
+    };
+
+    audioPlayer.onended = () => {
+      if (rankShuffleMode && playlist.length > 1) {
+        // 随机连播：从未播曲目随机挑下一首，播完一轮自动重置
+        playedIndices.add(currentIndex);
+        const unplayed = [];
+        for (let i = 0; i < playlist.length; i++) {
+          if (!playedIndices.has(i) && i !== currentIndex) unplayed.push(i);
+        }
+        if (!unplayed.length) {
+          playedIndices.clear();
+          for (let i = 0; i < playlist.length; i++) {
+            if (i !== currentIndex) unplayed.push(i);
+          }
+        }
+        const next = unplayed[Math.floor(Math.random() * unplayed.length)];
+        playSong(next);
+      } else {
+        if (currentIndex < playlist.length - 1) playSong(currentIndex + 1);
+        else playSong(0);
+      }
+    };
+
+    // 音质逐级降档：无损→高品质→标准（个别歌曲无更高音质源时自动兼容）
+    audioPlayer.onerror = () => {
+      if (currentIndex === -1) return;
+      const LADDER = ['flac', 'exhigh', 'mp3']; // option value 档位顺序：无损→高品质→标准
+      const pos = LADDER.indexOf(qualitySelect.value);
+      if (pos >= 0 && pos < LADDER.length - 1 && qualityFall < 2) {
+        qualityFall++;
+        const t = audioPlayer.currentTime || 0;
+        qualitySelect.value = LADDER[pos + 1];
+        playSong(currentIndex).then(() => { try { audioPlayer.currentTime = t; } catch (e) {} });
+      }
+    };
+
+    // ========== 事件绑定 ==========
+    randomBtn.onclick = triggerRandomPlay;
+    searchInput.onkeypress = e => { if(e.key === 'Enter') { const q = searchInput.value.trim(); q ? playRandomSearch(q) : triggerRandomPlay(); } };
+    miniLyricBar.onclick = openLyricPage;
+    rankHotBtn.onclick = () => loadRanking('hot');
+    rankNewBtn.onclick = () => loadRanking('new');
+    musicList.addEventListener('click', e => {
+      const row = e.target.closest('[data-index]');
+      if (row) playSong(parseInt(row.dataset.index, 10));
+    });
+    prevPageBtn.onclick = async () => { if(currentPage > 1) { currentPage--; await loadSearchList(); } };
+    nextPageBtn.onclick = async () => { currentPage++; await loadSearchList(); };
+    playBtn.onclick = () => {
+      if (audioPlayer.src) {
+        if (autoplayMuted) { autoplayMuted = false; audioPlayer.muted = false; } // 点击播放按钮即开声
+        if (audioPlayer.paused) { audioPlayer.play(); updatePlayButtonState(true); }
+        else { audioPlayer.pause(); updatePlayButtonState(false); }
+      }
+    };
+    prevBtn.onclick = () => { if(playlist.length) playSong(currentIndex > 0 ? currentIndex - 1 : playlist.length - 1); };
+    nextBtn.onclick = () => { if(playlist.length) playSong(currentIndex < playlist.length - 1 ? currentIndex + 1 : 0); };
+    progressContainer.onclick = e => {
+      if (!audioPlayer.duration) return;
+      const rect = progressContainer.getBoundingClientRect();
+      audioPlayer.currentTime = ((e.clientX - rect.left) / rect.width) * audioPlayer.duration;
+    };
+    lyricsContainer.onclick = e => {
+      const line = e.target.closest('.lyric-line');
+      if (line) { const t = parseFloat(line.dataset.time); if(!isNaN(t)) audioPlayer.currentTime = t; }
+    };
+    // 全屏歌词页控制
+    lyricPageClose.onclick = closeLyricPage;
+    lyricPagePlay.onclick = () => {
+      if (audioPlayer.src) {
+        if (autoplayMuted) { autoplayMuted = false; audioPlayer.muted = false; } // 点击播放按钮即开声
+        if (audioPlayer.paused) { audioPlayer.play(); updatePlayButtonState(true); }
+        else { audioPlayer.pause(); updatePlayButtonState(false); }
+      }
+    };
+    lyricPagePrev.onclick = () => { if (playlist.length) { playSong(currentIndex > 0 ? currentIndex - 1 : playlist.length - 1); openLyricPage(); } };
+    lyricPageNext.onclick = () => { if (playlist.length) { playSong(currentIndex < playlist.length - 1 ? currentIndex + 1 : 0); openLyricPage(); } };
+    lyricPageContainer.onclick = e => {
+      const line = e.target.closest('.lyric-line');
+      if (line) { const t = parseFloat(line.dataset.time); if(!isNaN(t)) audioPlayer.currentTime = t; }
+    };
+    qualitySelect.onchange = () => { if(currentIndex !== -1) { const t = audioPlayer.currentTime; playSong(currentIndex).then(() => audioPlayer.currentTime = t); } };
+    downloadSongBtn.onclick = downloadCurrentSong;
+    downloadLrcBtn.onclick = downloadLyrics;
+
+    settingsBtn.onclick = () => { proxyInput.value = localStorage.getItem('music_cors_proxy') || 'https://jsnzkpg4.pages.dev/'; settingsModal.classList.remove('hidden'); };
+    closeSettingsBtn.onclick = () => settingsModal.classList.add('hidden');
+    saveProxyBtn.onclick = () => {
+      const v = proxyInput.value.trim();
+      if (v) localStorage.setItem('music_cors_proxy', v);
+      else localStorage.removeItem('music_cors_proxy');
+      settingsModal.classList.add('hidden');
+      window.location.reload();
+    };
+
+    // ========== 初始化 ==========
+    initTheme();
+    qualitySelect.value = 'flac'; // 音质默认自动选择无损（接口无无损源时自动降级标准）
+    playerCover.src = DEFAULT_COVER;
+    playerCover.onerror = function() { this.src = DEFAULT_COVER; };
+
+    // 打开页面随机选榜：热歌榜/新歌榜二选一，整单洗牌后随机连播
+    loadRanking(Math.random() < 0.5 ? 'hot' : 'new');
+
+    console.log('🎵 美福瑞音乐网已加载');
+  </script>
+</body>
+</html>
